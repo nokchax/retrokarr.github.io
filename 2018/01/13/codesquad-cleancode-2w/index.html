@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="retrokarr&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      codesquad-cleancode-2w | Retrokarr
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Retrokarr</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>codesquad-cleancode-2w</h2>
+  <p class="post-date">2018-01-13</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>#TDD</p>
+<h4 id="객체지향-프로그래밍에-익숙해-지기-위해선"><a href="#객체지향-프로그래밍에-익숙해-지기-위해선" class="headerlink" title="객체지향 프로그래밍에 익숙해 지기 위해선?"></a>객체지향 프로그래밍에 익숙해 지기 위해선?</h4><p>객체지향에 익숙해야 웹프로그래밍에서도 잘 할 수있징</p>
+<ul>
+<li>요구사항이 명확</li>
+<li>약간은 복잡한 로직이 있어야함</li>
+<li>DB연동이 적은</li>
+<li>UI는 고려하지 않고</li>
+<li>웹프로그래밍은 객체지향 프로그래밍 연습에 좋지 않음</li>
+</ul>
+<h4 id="객체-지향-연습을-위한-좋은-예"><a href="#객체-지향-연습을-위한-좋은-예" class="headerlink" title="객체 지향 연습을 위한 좋은 예"></a>객체 지향 연습을 위한 좋은 예</h4><ul>
+<li>HTTP 웹 서버</li>
+<li>프레임워크 또는 라이브러리 구현해 보기</li>
+<li>볼링 게임 점수판</li>
+<li>체스 게임</li>
+<li>지뢰 찾기 게임</li>
+</ul>
+<h4 id="내가-생각하는-가장-좋은-연습-방법"><a href="#내가-생각하는-가장-좋은-연습-방법" class="headerlink" title="내가 생각하는 가장 좋은 연습 방법"></a>내가 생각하는 가장 좋은 연습 방법</h4><p>-</p>
+<p>####</p>
+<ul>
+<li>잘못된 습관 깨기(피드백을 위해)</li>
+</ul>
+<h3 id="1주차-피드백"><a href="#1주차-피드백" class="headerlink" title="1주차 피드백"></a>1주차 피드백</h3><h4 id="Code-convention-format-맞추기"><a href="#Code-convention-format-맞추기" class="headerlink" title="Code convention, format 맞추기"></a>Code convention, format 맞추기</h4><p>– private static int RANGE = 9;<br>– private final int MIN<em>COUNT = 1;<br>상수의 경우 <strong>static final</strong>, <strong>변수 이름은 대문자</strong>, **언더바(</em>)** 이용</p>
+<h4 id="클래스-변수의-위치는-클래스변수-인스턴스-변수-생성자-순으로-위치한다"><a href="#클래스-변수의-위치는-클래스변수-인스턴스-변수-생성자-순으로-위치한다" class="headerlink" title="클래스 변수의 위치는? 클래스변수, 인스턴스 변수, 생성자 순으로 위치한다."></a>클래스 변수의 위치는? 클래스변수, 인스턴스 변수, 생성자 순으로 위치한다.</h4><ul>
+<li>오버라이드 코드는 클래스 코드의 제일 아랫부분에 둔다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RaceTest</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Race race;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> CAR_COUNT = <span class="number">3</span>;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> TRY_COUNT = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">  [...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="공백-라인을-의미있게-사용해라-문맥을-분리하는-부분에-사용한다"><a href="#공백-라인을-의미있게-사용해라-문맥을-분리하는-부분에-사용한다" class="headerlink" title="공백 라인을 의미있게 사용해라. 문맥을 분리하는 부분에 사용한다."></a>공백 라인을 의미있게 사용해라. 문맥을 분리하는 부분에 사용한다.</h4><ul>
+<li>한화면에 볼수 있는 코드량도 적어짐</li>
+<li>맥락에 따라, 문단이 만들어지는 시점에 공백을 만들라</li>
+<li>코드 면접시에도 코드 컨벤션을 본다.</li>
+<li>space도 고려한다. 아래 코드에서도 i = 10;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">10</span>; i&lt;<span class="number">1000</span>; i++) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="특별한-경우가-아니면-이름-짓기에도-신경을-쓸-것-list-등과-같은"><a href="#특별한-경우가-아니면-이름-짓기에도-신경을-쓸-것-list-등과-같은" class="headerlink" title="특별한 경우가 아니면 이름 짓기에도 신경을 쓸 것 list 등과 같은"></a>특별한 경우가 아니면 이름 짓기에도 신경을 쓸 것 list 등과 같은</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String carNameList = scanner.nextLinet();</span><br></pre></td></tr></table></figure>
+<h4 id="tab-space등-공백에-대한-것"><a href="#tab-space등-공백에-대한-것" class="headerlink" title="tab, space등 공백에 대한 것"></a>tab, space등 공백에 대한 것</h4><p>팀내에서 맞추거나, 프로젝트 내에서는 통일 시키거나</p>
+<h4 id="객체를-객체스럽게-사용하도록-리팩토링해라"><a href="#객체를-객체스럽게-사용하도록-리팩토링해라" class="headerlink" title="객체를 객체스럽게 사용하도록 리팩토링해라"></a>객체를 객체스럽게 사용하도록 리팩토링해라</h4><ul>
+<li>Car 클래스를 추가한후 name과 position을 상태 값으로 가지는 객체를 추가했다.</li>
+<li>그런데 이 객체는 로직에 대한 구현은 하나도 없고, naem과 position에 대한 setter와 getter 메소드만 가진다.</li>
+<li><p>모든 필드에 대해서 getter, setter를 가질 필요가 없다.</p>
+</li>
+<li><p>객체지향 적으로 코드를 짜라, 절차지향방식으로는 중복코드가 발생하는 문제가 발생할 수 있다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> num = random.nextInt(<span class="number">11</span>);</span><br><span class="line">..getter</span><br><span class="line">logic</span><br><span class="line">setter</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>테스트를 하려는 순간 힘들어짐</p>
+</li>
+<li>여러번 돌려봄.. ㅋㅋ</li>
+<li><p>테스트 코드를 만든 이유는 그게 아님</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(getRandomNo() &gt;= <span class="number">4</span>)</span><br><span class="line">      <span class="keyword">this</span>.position++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getRandomNo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>상속을 통해서 기존 코드를 바꾸지 않고 테스트가 가능</p>
+</li>
+<li>randomNum을 뺴서</li>
+<li>더 나아간다면 interface를 도입</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MoveStrategy</span>() </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">boolean</span> <span class="title">isMove</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RandomMoveStrategy</span> <span class="keyword">implements</span> <span class="title">MovableStrategy</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>이때 RandomMoveStrategy의 isMove테스트는???<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RandomNumber</span> <span class="keyword">implements</span> <span class="title">MoveStrategy</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> num;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">RandomNumber</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">      <span class="keyword">throw</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">this</span>.num = num;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isMove</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num &gt;= <span class="number">4</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>메소드의 파라미터에서 추출하여 클래스화 시키는 것!</strong></p>
+<h4 id="인스턴스-변수의-수를-최소화한다"><a href="#인스턴스-변수의-수를-최소화한다" class="headerlink" title="인스턴스 변수의 수를 최소화한다."></a>인스턴스 변수의 수를 최소화한다.</h4><ul>
+<li>인스턴스 변수의 수를 최소화할 수 있는 방법을 찾는다.</li>
+<li>인스턴스 변수에 중복이 있지는 않은지,</li>
+<li>인스턴스 변수 이해 힘듬, 버그 많아짐</li>
+<li>인스턴스 변수를 두개까지만 허용하라.. 힘들긴 하지만 해보라.</li>
+</ul>
+<h4 id="setter-메소드-사용을-자제한다"><a href="#setter-메소드-사용을-자제한다" class="headerlink" title="setter 메소드 사용을 자제한다."></a>setter 메소드 사용을 자제한다.</h4><ul>
+<li>인스턴스를 초기화한 후에 값을 변경할 수 있는 setter 메소드를 생성하지 않는다.</li>
+</ul>
+<h4 id="비지니스-로직과-UI-로직의-분리"><a href="#비지니스-로직과-UI-로직의-분리" class="headerlink" title="비지니스 로직과 UI 로직의 분리"></a>비지니스 로직과 UI 로직의 분리</h4><p>sbappend<br>sout sb.tostring()</p>
+<h4 id="dto-data-transfer-objet"><a href="#dto-data-transfer-objet" class="headerlink" title="dto data transfer objet"></a>dto data transfer objet</h4><p>getter, setter 메소드를 허용 얼마든지</p>
+<h4 id="테스트코드도-유지비용이-든다-간소화-하자"><a href="#테스트코드도-유지비용이-든다-간소화-하자" class="headerlink" title="테스트코드도 유지비용이 든다. 간소화 하자"></a>테스트코드도 유지비용이 든다. 간소화 하자</h4><ul>
+<li>경계값만 테스트한다.</li>
+</ul>
+<h2 id="TDD"><a href="#TDD" class="headerlink" title="TDD"></a>TDD</h2><ul>
+<li>production code</li>
+<li>test code<br>test code -&gt; production code + 리팩토링(설계이기도 함)</li>
+</ul>
+<p>왜 테스트 코드를 먼저할 까</p>
+<ul>
+<li>프로덕션 코드를 위한 테스트가 되어버릴 가능성이 있음</li>
+<li>스펙이 명확해짐</li>
+<li>테스트 코드가 중요해서 먼저 만들면 까먹지 않음, 테스트 스킵을 없앰</li>
+<li>지속적인 리팩토링</li>
+</ul>
+<p>충돌 처리<br>git fetch origin step3</p>
+<ul>
+<li>branch      step3 -&gt; FETCH_HEAD<br>git merge -s ours FETCH_HEAD</li>
+</ul>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#TDD" >
+    <span class="tag-code">TDD</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+      <!-- No Comment -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2018/01/13/codesquad-cleancode-2w/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "rogue";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "codesquad-cleancode-2w",
+        owner: "rogue",
+        repo: "retrokarr.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2018 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

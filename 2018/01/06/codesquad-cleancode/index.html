@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="retrokarr&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      코드스쿼드 TDD, 리팩토링, 클린코드 1주차 강의정리 | Retrokarr
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Retrokarr</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>코드스쿼드 TDD, 리팩토링, 클린코드 1주차 강의정리</h2>
+  <p class="post-date">2018-01-06</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="TDD-리팩토링-클린코드-1일차"><a href="#TDD-리팩토링-클린코드-1일차" class="headerlink" title="TDD, 리팩토링, 클린코드 1일차"></a>TDD, 리팩토링, 클린코드 1일차</h1><hr>
+<h4 id="과정에-대해서"><a href="#과정에-대해서" class="headerlink" title="과정에 대해서"></a>과정에 대해서</h4><ul>
+<li>이번 <strong>클린코드를 위한 TDD, 리팩토링</strong> 과정은 level1 과정이다.</li>
+<li>level2 과정은  level2 (3~4월 진행 예정)</li>
+<li>이전에 진행했던 <strong>JavaWebProgramming</strong> 과정과 비교<ul>
+<li>JavaWebProgramming : 자바 -&gt; 웹 -&gt; 프레임워크</li>
+<li>level1 : 자바 -&gt; 웹 과정</li>
+<li>level2 : 웹 -&gt; 프레임워크 과정</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>JavaWebProgramming은 <a href="http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=91501933" target="_blank" rel="noopener">자바 웹 프로그래밍 Next Step</a>을 바탕으로 진행</p>
+</blockquote>
+<hr>
+<h4 id="수업-진행-방식"><a href="#수업-진행-방식" class="headerlink" title="수업 진행 방식"></a>수업 진행 방식</h4><ol>
+<li>이론 강의 및 미션 피드백(강의 시간)</li>
+<li>단계별 미션 진행</li>
+<li>진행한 미션에 대한 온라인 코드 리뷰</li>
+</ol>
+<p>매주 1회 강의 시간에는 이론 강의 및 미션 피드백을 받고, 그 외의 6일 동안은 한주의 미션을 진행한다. 미션은 여러 단계로 나누어져 있으며, 한 단계를 끝나면 다음 단계의 구현을 진행하는 방식. 요구사항에 대한 코드 구현이 완료될 경우, 이 코드에 대해서 온라인 피드백을 받는다. 피드백을 받은 부분에 대한 재구현.</p>
+<hr>
+<h4 id="수업-목표"><a href="#수업-목표" class="headerlink" title="수업 목표"></a>수업 목표</h4><ul>
+<li>TDD, 리팩토링, 클린코드</li>
+<li>순수 자바, 웹 기반으로 객체지향 프로그래밍</li>
+<li>ATDD 기반 웹 애플리케이션 개발<blockquote>
+<p>ATDD : 프론트 -&gt; 백 -&gt; DB 까지 전체적인 테스트를 하면서 코드를 짜는 개발론</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="커리큘럼"><a href="#커리큘럼" class="headerlink" title="커리큘럼"></a>커리큘럼</h4><h5 id="1주차-단위-테스트-메소드-분리"><a href="#1주차-단위-테스트-메소드-분리" class="headerlink" title="1주차 - 단위 테스트, 메소드 분리"></a>1주차 - 단위 테스트, 메소드 분리</h5><ul>
+<li>junit을 활용한 단위 테스트 이론 및 실습</li>
+<li>온라인 코드 리뷰 방식 공유</li>
+<li>초간단 자동차 경주 게임 구현 및 코드 리뷰</li>
+<li>spark.java를 활용한 웹 프로그래밍</li>
+</ul>
+<h5 id="2주차-TDD-클래스-분리"><a href="#2주차-TDD-클래스-분리" class="headerlink" title="2주차 - TDD, 클래스 분리"></a>2주차 - TDD, 클래스 분리</h5><ul>
+<li>초간단 자동차 경주 게임 피드백</li>
+<li>TDD/리팩토링 강의</li>
+<li>문자열 계산기 구현을 통한 TDD/리팩토링 실습</li>
+<li>로또 미션 구현 및 코드 리뷰</li>
+</ul>
+<h5 id="3주차-함수형-프로그래밍-stream-람다"><a href="#3주차-함수형-프로그래밍-stream-람다" class="headerlink" title="3주차 - 함수형 프로그래밍, stream, 람다"></a>3주차 - 함수형 프로그래밍, stream, 람다</h5><ul>
+<li>로또 미션 피드백</li>
+<li>함수형 프로그래밍, 자바 8의 stream과 람다 강의 및 실습</li>
+<li>볼링 게임 미션 구현 및 코드 리뷰</li>
+</ul>
+<h5 id="4주차-ATDD-OOP"><a href="#4주차-ATDD-OOP" class="headerlink" title="4주차 - ATDD, OOP"></a>4주차 - ATDD, OOP</h5><ul>
+<li>볼링 게임 미션 피드백</li>
+<li>ATDD, 웹 프로그래밍 아키텍처 및 테스트 강의</li>
+<li>질문/답변 게시판에서 ATDD 실습</li>
+<li>질문/답변 게시판 미션 구현 및 코드 리뷰</li>
+</ul>
+<h5 id="5주차-ATDD-리팩토링-Clean-Code"><a href="#5주차-ATDD-리팩토링-Clean-Code" class="headerlink" title="5주차 - ATDD, 리팩토링, Clean Code"></a>5주차 - ATDD, 리팩토링, Clean Code</h5><ul>
+<li>질문/답변 게시판 구현 피드백</li>
+<li>Mock 프레임워크를 활용한 테스트</li>
+</ul>
+<hr>
+<h3 id="의식적인-연습"><a href="#의식적인-연습" class="headerlink" title="의식적인 연습"></a>의식적인 연습</h3><h4 id="의식적인-연습의-7가지-원칙"><a href="#의식적인-연습의-7가지-원칙" class="headerlink" title="의식적인 연습의 7가지 원칙"></a>의식적인 연습의 7가지 원칙</h4><ol>
+<li>효과적인 훈련 기법이 수립되어 있는 기술 연마</li>
+<li>개인의 컴포트 존을 벗어난 지점에서 진행, 자신의 현재 능력을 살짝 넘어가는 작업을 지속적으로 시도</li>
+<li>명확하고 구체적인 목표를 가지고 진행</li>
+<li>신중하고 계획적이다. 즉, 개인이 온전히 집중하고 ‘의식적’으로 행동할 것을 요구</li>
+<li>피드백과 피드백에 따른 행동 변경을 수반</li>
+<li>효과적인 심적 표상을 만들어내는 한편으로 심적 표상에 의존</li>
+<li>기존에 습득한 기술의 특정 부분을 집중적으로 개선함으로써 발전시키고, 수정하는 과정을 수반</li>
+</ol>
+<h4 id="의식적인-연습-1-온라인-코드리뷰"><a href="#의식적인-연습-1-온라인-코드리뷰" class="headerlink" title="의식적인 연습 1 - 온라인 코드리뷰"></a>의식적인 연습 1 - 온라인 코드리뷰</h4><ul>
+<li>단계별 난이도를 높혀 가면서 미션 진행</li>
+<li>코드 리뷰를 통해 피드백</li>
+</ul>
+<h4 id="의식적인-연습-2-객체지향-생활-체조-원칙"><a href="#의식적인-연습-2-객체지향-생활-체조-원칙" class="headerlink" title="의식적인 연습 2 - 객체지향 생활 체조 원칙"></a>의식적인 연습 2 - 객체지향 생활 체조 원칙</h4><ul>
+<li>규칙 1 : 한 메서드에 오직 한 단계의 들여쓰기만 한다.</li>
+<li>규칙 2 : else 예약어를 쓰지 않는다.</li>
+<li>규칙 3 : 모든 원시값과 문자열을 포장한다.</li>
+<li>규칙 4 : 한 줄에 점을 하나만 찍는다.</li>
+<li>규칙 5 : 줄여쓰지 않는다.(축약 금지)</li>
+<li>규칙 6 : 모든 엔티티를 작게 유지한다.</li>
+<li>규칙 7 : 2개 이상의 인스턴스 변수를 가진 클래스를 쓰지 않는다.</li>
+<li>규칙 8 : 일급 콜렉션을 쓴다.</li>
+<li>규칙 9 : 게터/세터/프로퍼티를 쓰지 않는다.</li>
+</ul>
+<h4 id="의식적인-연습-3-테스트"><a href="#의식적인-연습-3-테스트" class="headerlink" title="의식적인 연습 3 - 테스트"></a>의식적인 연습 3 - 테스트</h4><ul>
+<li>테스트 가능한 코드를 구현하면서 자연스럽게 피드백을 받음.</li>
+<li>테스트를 통해 빠른 피드백을 받는 것이 가능함.</li>
+</ul>
+<hr>
+<h4 id="당부의-말"><a href="#당부의-말" class="headerlink" title="당부의 말"></a>당부의 말</h4><ul>
+<li>시간 확보</li>
+<li>가진 것을 비우자 자신이 가진 것을 비울때 많은 것을 배울 수 있다.</li>
+<li>과제는 몰아서 하지말고 하루에 조금씩, 미리미리 하자</li>
+</ul>
+<h4 id="리팩토링에-대해서"><a href="#리팩토링에-대해서" class="headerlink" title="리팩토링에 대해서"></a>리팩토링에 대해서</h4><p>단축키를 익히자. 특히 메소드 추출, 이름 바꾸기와 같은 리팩토링에 대한 단축키는 꼭 익히자.</p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+      <!-- No Comment -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2018/01/06/codesquad-cleancode/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "rogue";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "코드스쿼드 TDD, 리팩토링, 클린코드 1주차 강의정리",
+        owner: "rogue",
+        repo: "retrokarr.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2018 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
