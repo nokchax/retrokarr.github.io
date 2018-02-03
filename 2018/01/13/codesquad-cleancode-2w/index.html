@@ -10,7 +10,7 @@
   
   <title>
     
-      codesquad-cleancode-2w | Retrokarr
+      클린코드를 위한 TDD, 리팩토링 2주차 - 리뷰 | Retrokarr
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -88,7 +88,7 @@
 </header>
 
     <div id="article-banner">
-  <h2>codesquad-cleancode-2w</h2>
+  <h2>클린코드를 위한 TDD, 리팩토링 2주차 - 리뷰</h2>
   <p class="post-date">2018-01-13</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -97,14 +97,13 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>#TDD</p>
-<h4 id="객체지향-프로그래밍에-익숙해-지기-위해선"><a href="#객체지향-프로그래밍에-익숙해-지기-위해선" class="headerlink" title="객체지향 프로그래밍에 익숙해 지기 위해선?"></a>객체지향 프로그래밍에 익숙해 지기 위해선?</h4><p>객체지향에 익숙해야 웹프로그래밍에서도 잘 할 수있징</p>
+    <section class="markdown-content"><h3 id="효과적인-객체지향-연습법"><a href="#효과적인-객체지향-연습법" class="headerlink" title="효과적인 객체지향 연습법"></a>효과적인 객체지향 연습법</h3><h4 id="객체지향-프로그래밍에-익숙해-지기-위해선"><a href="#객체지향-프로그래밍에-익숙해-지기-위해선" class="headerlink" title="객체지향 프로그래밍에 익숙해 지기 위해선?"></a>객체지향 프로그래밍에 익숙해 지기 위해선?</h4><p>객체지향에 익숙해야 웹프로그래밍에서도 잘 할 수 있다.</p>
 <ul>
 <li>요구사항이 명확</li>
 <li>약간은 복잡한 로직이 있어야함</li>
-<li>DB연동이 적은</li>
+<li>DB연동이 없는</li>
 <li>UI는 고려하지 않고</li>
-<li>웹프로그래밍은 객체지향 프로그래밍 연습에 좋지 않음</li>
+<li>웹 프로그래밍은 객체지향 프로그래밍 연습에 좋지 않음</li>
 </ul>
 <h4 id="객체-지향-연습을-위한-좋은-예"><a href="#객체-지향-연습을-위한-좋은-예" class="headerlink" title="객체 지향 연습을 위한 좋은 예"></a>객체 지향 연습을 위한 좋은 예</h4><ul>
 <li>HTTP 웹 서버</li>
@@ -113,35 +112,37 @@
 <li>체스 게임</li>
 <li>지뢰 찾기 게임</li>
 </ul>
-<h4 id="내가-생각하는-가장-좋은-연습-방법"><a href="#내가-생각하는-가장-좋은-연습-방법" class="headerlink" title="내가 생각하는 가장 좋은 연습 방법"></a>내가 생각하는 가장 좋은 연습 방법</h4><p>-</p>
-<p>####</p>
-<ul>
-<li>잘못된 습관 깨기(피드백을 위해)</li>
+<h4 id="좋은-연습-방법"><a href="#좋은-연습-방법" class="headerlink" title="좋은 연습 방법"></a>좋은 연습 방법</h4><ul>
+<li>그룹 스터티(2~3인)</li>
+<li>위의 좋은 예를 구현하고 상호 코드리뷰</li>
+<li>이때 테스트 코드를 만들고, 테스트하기 쉬운 코드를 구현하기 위해 노력해본다.</li>
+<li>상호 코드리뷰 -&gt; 리팩토링을 반복</li>
+<li>몇 개월 지난 후 같은 애플리케이션을 다시 한번 구현</li>
 </ul>
-<h3 id="1주차-피드백"><a href="#1주차-피드백" class="headerlink" title="1주차 피드백"></a>1주차 피드백</h3><h4 id="Code-convention-format-맞추기"><a href="#Code-convention-format-맞추기" class="headerlink" title="Code convention, format 맞추기"></a>Code convention, format 맞추기</h4><p>– private static int RANGE = 9;<br>– private final int MIN<em>COUNT = 1;<br>상수의 경우 <strong>static final</strong>, <strong>변수 이름은 대문자</strong>, **언더바(</em>)** 이용</p>
-<h4 id="클래스-변수의-위치는-클래스변수-인스턴스-변수-생성자-순으로-위치한다"><a href="#클래스-변수의-위치는-클래스변수-인스턴스-변수-생성자-순으로-위치한다" class="headerlink" title="클래스 변수의 위치는? 클래스변수, 인스턴스 변수, 생성자 순으로 위치한다."></a>클래스 변수의 위치는? 클래스변수, 인스턴스 변수, 생성자 순으로 위치한다.</h4><ul>
-<li>오버라이드 코드는 클래스 코드의 제일 아랫부분에 둔다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RaceTest</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Race race;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> CAR_COUNT = <span class="number">3</span>;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> TRY_COUNT = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">  [...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1주차-피드백"><a href="#1주차-피드백" class="headerlink" title="1주차 피드백"></a>1주차 피드백</h3><h4 id="Code-convention-format-맞추기"><a href="#Code-convention-format-맞추기" class="headerlink" title="Code convention, format 맞추기"></a>Code convention, format 맞추기</h4><h5 id="상수의-경우-static-final-변수-이름은-대문자-언더바-이용"><a href="#상수의-경우-static-final-변수-이름은-대문자-언더바-이용" class="headerlink" title="상수의 경우 static final, 변수 이름은 대문자, 언더바(_) 이용"></a>상수의 경우 <strong>static final</strong>, <strong>변수 이름은 대문자</strong>, <strong>언더바(_)</strong> 이용</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//잘못된 예</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> RANGE = <span class="number">9</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> MIN_COUNT = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="클래스-변수의-위치는-클래스변수-인스턴스-변수-생성자-순으로-위치한다"><a href="#클래스-변수의-위치는-클래스변수-인스턴스-변수-생성자-순으로-위치한다" class="headerlink" title="클래스 변수의 위치는? 클래스변수, 인스턴스 변수, 생성자 순으로 위치한다."></a>클래스 변수의 위치는? 클래스변수, 인스턴스 변수, 생성자 순으로 위치한다.</h5><ul>
+<li>오버라이드 코드는 클래스 코드의 제일 아랫부분에 둔다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//잘못된 예</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RaceTest</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Race race;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> CAR_COUNT = <span class="number">3</span>;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> TRY_COUNT = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">  [...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="공백-라인을-의미있게-사용해라-문맥을-분리하는-부분에-사용한다"><a href="#공백-라인을-의미있게-사용해라-문맥을-분리하는-부분에-사용한다" class="headerlink" title="공백 라인을 의미있게 사용해라. 문맥을 분리하는 부분에 사용한다."></a>공백 라인을 의미있게 사용해라. 문맥을 분리하는 부분에 사용한다.</h4><ul>
-<li>한화면에 볼수 있는 코드량도 적어짐</li>
+<h5 id="공백-라인은-문맥을-분리할때-사용한다"><a href="#공백-라인은-문맥을-분리할때-사용한다" class="headerlink" title="공백 라인은 문맥을 분리할때 사용한다."></a>공백 라인은 문맥을 분리할때 사용한다.</h5><ul>
+<li>공백을 무분별하게 사용하면, 한화면에 볼수 있는 코드량도 적어짐</li>
 <li>맥락에 따라, 문단이 만들어지는 시점에 공백을 만들라</li>
 <li>코드 면접시에도 코드 컨벤션을 본다.</li>
-<li>space도 고려한다. 아래 코드에서도 i = 10;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">10</span>; i&lt;<span class="number">1000</span>; i++) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>space도 고려한다. 아래 코드에서도 i = 10;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//잘못된 예</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">10</span>; i&lt;<span class="number">1000</span>; i++) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="특별한-경우가-아니면-이름-짓기에도-신경을-쓸-것-list-등과-같은"><a href="#특별한-경우가-아니면-이름-짓기에도-신경을-쓸-것-list-등과-같은" class="headerlink" title="특별한 경우가 아니면 이름 짓기에도 신경을 쓸 것 list 등과 같은"></a>특별한 경우가 아니면 이름 짓기에도 신경을 쓸 것 list 등과 같은</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String carNameList = scanner.nextLinet();</span><br></pre></td></tr></table></figure>
+<h4 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h4><p>특별한 경우가 아니면 이름 짓기에도 신경을 쓸 것<br>복수의 경우 list대신 복수형을 붙이자.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//잘못된 예</span></span><br><span class="line">String carNameList = scanner.nextLine();</span><br><span class="line"></span><br><span class="line"><span class="comment">//잘된 예</span></span><br><span class="line">String carNames = scanner.nextLine();</span><br></pre></td></tr></table></figure></p>
 <h4 id="tab-space등-공백에-대한-것"><a href="#tab-space등-공백에-대한-것" class="headerlink" title="tab, space등 공백에 대한 것"></a>tab, space등 공백에 대한 것</h4><p>팀내에서 맞추거나, 프로젝트 내에서는 통일 시키거나</p>
 <h4 id="객체를-객체스럽게-사용하도록-리팩토링해라"><a href="#객체를-객체스럽게-사용하도록-리팩토링해라" class="headerlink" title="객체를 객체스럽게 사용하도록 리팩토링해라"></a>객체를 객체스럽게 사용하도록 리팩토링해라</h4><ul>
 <li>Car 클래스를 추가한후 name과 position을 상태 값으로 가지는 객체를 추가했다.</li>
-<li>그런데 이 객체는 로직에 대한 구현은 하나도 없고, naem과 position에 대한 setter와 getter 메소드만 가진다.</li>
-<li><p>모든 필드에 대해서 getter, setter를 가질 필요가 없다.</p>
+<li>그런데 이 객체는 로직에 대한 구현은 하나도 없고, name과 position에 대한 setter와 getter 메소드만 가진다.</li>
+<li>모든 필드에 대해서 getter, setter를 가질 필요가 없다.</li>
+<li>객체지향 적으로 코드를 짜라, 절차지향방식으로는 중복코드가 발생하는 문제가 발생할 수 있다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//절차 지향적인 코드</span></span><br><span class="line"><span class="keyword">int</span> num = random.nextInt(<span class="number">11</span>);</span><br><span class="line">getter</span><br><span class="line">logic</span><br><span class="line">setter</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>객체지향 적으로 코드를 짜라, 절차지향방식으로는 중복코드가 발생하는 문제가 발생할 수 있다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> num = random.nextInt(<span class="number">11</span>);</span><br><span class="line">..getter</span><br><span class="line">logic</span><br><span class="line">setter</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>테스트를 하려는 순간 힘들어짐</p>
-</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//객체 지향적인 코드</span></span><br><span class="line"><span class="keyword">int</span> num = random.nextInt(<span class="number">11</span>);</span><br><span class="line">car.move(num);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>테스트를 하려는 순간 힘들어짐</li>
 <li>여러번 돌려봄.. ㅋㅋ</li>
 <li><p>테스트 코드를 만든 이유는 그게 아님</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(getRandomNo() &gt;= <span class="number">4</span>)</span><br><span class="line">      <span class="keyword">this</span>.position++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getRandomNo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -175,7 +176,7 @@
 <li>production code</li>
 <li>test code<br>test code -&gt; production code + 리팩토링(설계이기도 함)</li>
 </ul>
-<p>왜 테스트 코드를 먼저할 까</p>
+<p>왜 테스트 코드를 먼저할까</p>
 <ul>
 <li>프로덕션 코드를 위한 테스트가 되어버릴 가능성이 있음</li>
 <li>스펙이 명확해짐</li>
@@ -192,8 +193,20 @@
       <div class="tags">
         <span>Tags:</span>
         
+  <a href="/tags#클린코드" >
+    <span class="tag-code">클린코드</span>
+  </a>
+
+  <a href="/tags#코드스쿼드" >
+    <span class="tag-code">코드스쿼드</span>
+  </a>
+
   <a href="/tags#TDD" >
     <span class="tag-code">TDD</span>
+  </a>
+
+  <a href="/tags#OOP" >
+    <span class="tag-code">OOP</span>
   </a>
 
       </div>
@@ -273,7 +286,7 @@
     var gitmentConfig = "rogue";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "codesquad-cleancode-2w",
+        id: "클린코드를 위한 TDD, 리팩토링 2주차 - 리뷰",
         owner: "rogue",
         repo: "retrokarr.github.io",
         oauth: {
