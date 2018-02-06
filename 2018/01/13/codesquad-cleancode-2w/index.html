@@ -131,8 +131,8 @@
 <li>space도 고려한다. 아래 코드에서도 i = 10;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//잘못된 예</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">10</span>; i&lt;<span class="number">1000</span>; i++) &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h4><p>특별한 경우가 아니면 이름 짓기에도 신경을 쓸 것<br>복수의 경우 list대신 복수형을 붙이자.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//잘못된 예</span></span><br><span class="line">String carNameList = scanner.nextLine();</span><br><span class="line"></span><br><span class="line"><span class="comment">//잘된 예</span></span><br><span class="line">String carNames = scanner.nextLine();</span><br></pre></td></tr></table></figure></p>
-<h4 id="tab-space등-공백에-대한-것"><a href="#tab-space등-공백에-대한-것" class="headerlink" title="tab, space등 공백에 대한 것"></a>tab, space등 공백에 대한 것</h4><p>팀내에서 맞추거나, 프로젝트 내에서는 통일 시키거나</p>
+<h4 id="이름-짓기"><a href="#이름-짓기" class="headerlink" title="이름 짓기"></a>이름 짓기</h4><p>특별한 경우가 아니면 이름 짓기에도 신경을 쓸 것<br>복수의 경우 list대신 복수형을 붙이자.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//잘못된 예</span></span><br><span class="line">String carNameList = scanner.nextLine();</span><br><span class="line"></span><br><span class="line"><span class="comment">//잘된 예</span></span><br><span class="line">String carNames = scanner.nextLine();</span><br></pre></td></tr></table></figure></p>
+<h4 id="tab-space등-공백에-대해서"><a href="#tab-space등-공백에-대해서" class="headerlink" title="tab, space등 공백에 대해서"></a>tab, space등 공백에 대해서</h4><p>팀내에서 맞추거나, 프로젝트 내에서만이라도 통일 시키거나</p>
 <h4 id="객체를-객체스럽게-사용하도록-리팩토링해라"><a href="#객체를-객체스럽게-사용하도록-리팩토링해라" class="headerlink" title="객체를 객체스럽게 사용하도록 리팩토링해라"></a>객체를 객체스럽게 사용하도록 리팩토링해라</h4><ul>
 <li>Car 클래스를 추가한후 name과 position을 상태 값으로 가지는 객체를 추가했다.</li>
 <li>그런데 이 객체는 로직에 대한 구현은 하나도 없고, name과 position에 대한 setter와 getter 메소드만 가진다.</li>
@@ -141,10 +141,12 @@
 </li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//객체 지향적인 코드</span></span><br><span class="line"><span class="keyword">int</span> num = random.nextInt(<span class="number">11</span>);</span><br><span class="line">car.move(num);</span><br></pre></td></tr></table></figure>
+<p>car.move(); 로 만들어두고 내부에서 랜덤숫자를 생성해 판단학 되면?<br>이 차가 움직였는지 움직이지 않았는지에 대해서 판단하기 힘들어짐.. 개발자가 테스트를 컨드롤할 수가 없음</p>
 <ul>
 <li>테스트를 하려는 순간 힘들어짐</li>
-<li>여러번 돌려봄.. ㅋㅋ</li>
-<li><p>테스트 코드를 만든 이유는 그게 아님</p>
+<li>여러번 돌려봄</li>
+<li>테스트 코드를 만든 이유는 그게 아님</li>
+<li><p>개발자가 테스트의 흐름을 조작할 수 있어야한다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(getRandomNo() &gt;= <span class="number">4</span>)</span><br><span class="line">      <span class="keyword">this</span>.position++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getRandomNo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>상속을 통해서 기존 코드를 바꾸지 않고 테스트가 가능</p>
